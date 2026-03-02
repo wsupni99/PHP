@@ -2,8 +2,9 @@
 // http://localhost:63342/PHP/02/HW/index.php?min=1000&max=10000&sort=name&dir=desc
 // http://localhost:63342/PHP/02/HW/index.php?q=book&min=100&sort=price&dir=asc&page=2&perPage=3
 function safe(string $s): string {
-    return safe($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
+
 $products = [
     [
         'id' => 1,
