@@ -44,8 +44,8 @@ $routes['POST']['/form'] = function () {
     $name  = isset($_POST['name']) ? $_POST['name'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-    $name  = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-    $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+    $name  = safe($name);
+    $email = safe($email);
 
     echo '<!doctype html>';
     echo '<html lang="ru">';
