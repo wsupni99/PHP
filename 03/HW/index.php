@@ -13,7 +13,7 @@ $routes = [
     'POST' => [],
 ];
 
-$routes['GET']['/'] = function () {
+$routes['GET']['/home'] = function () {
     echo '<!doctype html>';
     echo '<html lang="ru">';
     echo '<head><meta charset="UTF-8"><title>Роутер</title></head>';
